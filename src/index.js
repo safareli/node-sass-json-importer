@@ -83,8 +83,6 @@ function parseValue(value) {
     return parseList(value);
   } else if (_.isPlainObject(value)) {
     return parseMap(value);
-  } else if (_.isString(value) && value.match(/[\s,]/) && !value.match(/[()]/)) {
-    return `"${value}"`;
   } else {
     return value;
   }

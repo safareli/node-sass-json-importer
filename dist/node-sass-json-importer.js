@@ -95,8 +95,6 @@ function parseValue(value) {
     return parseList(value);
   } else if (_lodash2['default'].isPlainObject(value)) {
     return parseMap(value);
-  } else if (_lodash2['default'].isString(value) && value.match(/[\s,]/) && !value.match(/[()]/)) {
-    return '"' + value + '"';
   } else {
     return value;
   }
